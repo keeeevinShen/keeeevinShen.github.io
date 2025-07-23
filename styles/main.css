@@ -1,0 +1,438 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Softer background */
+    color: #4a4a4a; /* Darker grey for text */
+    line-height: 1.6;
+    display: flex;
+}
+
+.sidebar {
+    width: 280px;
+    background: #ffffff; /* Keep sidebar white for contrast */
+    border-right: 1px solid #e0e0e0; /* Softer border */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.main-content {
+    margin-left: 280px;
+    flex-grow: 1;
+    padding: 3rem;
+    background-color: #f4f7f6; /* Match body background */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-content {
+    background: #ffffff; /* White content area */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Profile specific styles */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid #f4f7f6; /* Match background */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    font-size: 1rem;
+    color: #5a6872;
+    margin-bottom: 1rem;
+}
+
+.university-logo {
+    width: 80px;
+    height: auto;
+    margin: 1rem 0 1.5rem 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.university-logo:hover {
+    opacity: 1;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #5a6872;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #4a90e2; /* A more pleasant blue */
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem; /* Changed from auto to a specific value */
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links .github { background-color: #333; }
+.social-links .linkedin { background-color: #0077b5; }
+.social-links .email { background-color: #dc3545; }
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #4a90e2; /* Thicker, pleasant blue border */
+    padding-bottom: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2; /* Pleasant blue */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.skill-category h4 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.skill-list {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.project-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2; /* Pleasant blue */
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.item-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.item-description {
+    color: #555;
+    font-size: 0.95rem;
+    padding-left: 0.5rem;
+}
+
+.item-description ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.item-description li {
+    margin-bottom: 0.5rem;
+}
+
+/* Experience & Education Section */
+.experience-item,
+.education-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2; /* Pleasant blue */
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover,
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Blog Styles */
+.blog-post {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2; /* Pleasant blue */
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.post-header {
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.post-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: #4a90e2; /* Pleasant blue */
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: #4a90e2; /* Pleasant blue */
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.post-content {
+    color: #555;
+    line-height: 1.7;
+}
+
+.about-text {
+    text-align: justify;
+    line-height: 1.7;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.read-more a {
+    color: #4a90e2; /* Pleasant blue */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more a:hover {
+    color: #357abd; /* Darker shade of blue for hover */
+    text-decoration: underline;
+}
+
+.coming-soon {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 3rem 0;
+    font-size: 1.1rem;
+}
+
+.tech-stack {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4a90e2; /* Pleasant blue */
+}
+
+.article-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.article-content pre {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.article-content code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    color: #333;
+}
+
+.back-to-blog {
+    text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: none;
+        border-bottom: 1px solid #e0e0e0; /* Softer border */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar .profile-image { display: none; }
+    .sidebar .profile-name { font-size: 1.5rem; }
+    .sidebar .profile-title { display: none; }
+    
+    .main-nav ul {
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .main-nav a {
+        padding: 0.5rem 1rem;
+        margin: 0;
+    }
+
+    .social-links {
+        display: none; /* Hide in header on smaller screens, can be moved elsewhere */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+} 
