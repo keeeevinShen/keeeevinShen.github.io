@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection on Building Web App - Hao Shen</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .article-date {
+            font-size: 1rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .back-to-blog {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .back-to-blog a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-blog a:hover {
+            color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <img src="../IMG_0003 2.jpg" alt="Hao Shen" class="profile-image">
+        <h1 class="profile-name">Hao Shen</h1>
+        <p class="profile-title">
+            Student in Computer Science<br>B.S.E @ University of Michigan
+        </p>
+        
+        <img src="../U-M.png" alt="University of Michigan" class="university-logo">
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../experience.html">Experience</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-links">
+            <a href="mailto:haoshen@umich.edu" class="email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/keeeevinShen" class="github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/hao-shen-85b435369" class="linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-content">
+                <div class="article-header">
+                    <h1 class="article-title">Reflection on Building Web App</h1>
+                    <div class="article-meta">
+                        <div class="article-date">August 6, 2025</div>
+                        <div class="article-tags">
+                            <span class="tag">Debugging</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">Libraries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-content">
+                    <h3>Use a Virtual Environment and Keep Libraries Updated</h3>
+                    <p>Use a venv and make sure to update the library to the latest version. Or the version you are pretty sure that would work.</p>
+                    
+                    <h3>The Most Frustrating Two Days</h3>
+                    <p>This is probably the most frustrating two days in my life. I was working on this langGraph agent and testing it locally. The weird thing is when I am testing the sending chat function, the afternoon it works but the same day night, it's not working, getting some misleading error message from langGraph.</p>
+                    
+                    <h3>Almost Giving Up</h3>
+                    <p>After struggling two days trying to fix the router and the graph logic itself, and right before the moment I almost decide to quit CS, I upgrade the langGraph library, and.... it works...</p>
+                    
+                    <h3>失去了所有力气和手段</h3>
+                    <p>Sometimes the simplest solutions are the hardest to see. After exhausting every debugging technique, diving deep into complex graph logic, and questioning my entire approach, the answer was just a library version update. It's a humbling reminder that in software development, environment setup and dependency management are just as important as the code itself.</p>
+                </div>
+
+                <div class="back-to-blog">
+                    <a href="../blog.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
